@@ -1,16 +1,16 @@
 .note-container {
     padding: 10px;
     margin: 20px 0;
-    border: 1px solid #ccc;
+    border: 1px solid #c70b0b;
     border-radius: 5px;
   }
   
   .note-title {
-    color: #333;
+    color: #ed2020;
   }
   
   .note-content {
-    color: #666;
+    color: #e81f1f;
   }
   
   .note-date {

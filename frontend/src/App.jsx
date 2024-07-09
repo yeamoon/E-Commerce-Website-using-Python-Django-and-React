@@ -6,6 +6,7 @@ import Login from "./pages/Login"
 import Register from "./pages/Register"
 
 import Privateroute from "./components/Privateroute"
+import Layout from './hocs/Layout';
 
 function RegisterAndLogout() {
   localStorage.clear()
@@ -17,17 +18,19 @@ function App() {
 
     return (
       <BrowserRouter>
+      <Layout>
         <Routes>
+          
           <Route
             path="/"
             element={
-              <Privateroute>
+             
                 <Home />
-              </Privateroute>
+            
             }
           />
           <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<RegisterAndLogout />} />
+          <Route path="/register" element={<Register />} />
       
 
 
@@ -36,6 +39,7 @@ function App() {
 
 
           </Routes>
+          </Layout>
           </BrowserRouter>
       
 
