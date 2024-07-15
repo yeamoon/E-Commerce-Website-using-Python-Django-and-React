@@ -1,0 +1,29 @@
+.card {
+    padding: 4rem 3rem;
+    background-color:azure;
+    border-radius: 0.5rem;
+}
+.card__header {
+        width: 100%;
+}
+.card__header__photo {
+            width: 100%;
+        }
+    
+
+    .card__title {
+        color:aquamarine;
+        font-size: 2.4rem;
+        margin-bottom: 2rem;
+    }
+
+    
+    .card__info {
+        font-size: 1.6rem;
+        color:blue;
+        margin-bottom: 0.5rem;
+    }
+
+  
+
+    

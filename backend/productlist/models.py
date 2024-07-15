@@ -8,15 +8,15 @@ CATEGORY_CHOICES = (
     ('OW', 'Outwear')
 )
 # Create your models here.
-class Item(models.Model):
+class Listing(models.Model):
     title = models.CharField(max_length=100)
     price = models.FloatField()
     discount_price = models.FloatField(blank=True, null=True)
     category = models.CharField(choices=CATEGORY_CHOICES, max_length=2)
 
-    slug = models.SlugField()
+  
     description = models.TextField()
-    image = models.ImageField()
+    photo_main = models.ImageField(upload_to='photos/%Y/%m/%d/')
     ownerr = models.ForeignKey(Productowner, on_delete=models.DO_NOTHING)
 
     

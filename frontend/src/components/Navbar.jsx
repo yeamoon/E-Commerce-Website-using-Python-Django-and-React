@@ -17,7 +17,7 @@ const navbar = () => {
             <nav className='navbar'>
                 <div className='navbar__top'>
                     <div className='navbar__top__logo'>
-                        <Link className='navbar__top__logo__link' to='/'>E-Coomerec</Link>
+                        <Link className='navbar__top__logo__link' to='/'>E-Commerce</Link>
                     </div>
                     <div className='navbar__top__auth'>
                         {  (<Fragment>{ guestLinks }</Fragment>) }
