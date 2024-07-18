@@ -1,79 +1,29 @@
-import React, { useState, useEffect } from 'react';
-import api from "../api";
-import axios from 'axios';
+// src/components/HomePage.js
 
-
-const Home= () => {
-    const [listings, setListings] = useState([]);
-   
-
-    useEffect(() => {
-        getowners();
-    }, []);
-
-    const getowners = () => {
-        api.get("/api/owners/")
-        
-            .then((res) => res.data)
-            .then((data) => {
-                setListings(data);
-                console.log(data);
-            })
-            .catch((err) => alert(err));
-    };
-
-
-
-    const displayListings = () => {
-        let display = [];
-        let result = [];
-
-        listings.map(listing => {
-            return display.push(
-               
-                  listing.name,
-                    listing.email,
-                    listing.phone,
-                   
-                
-            );
-        });
-        console.log(display.length)
-         let j=0;
-        for (let i = 0; i < listings.length; i++) {
-            result.push(
-                <div key={i+j} className='row'>
-                    <div className='col-1-of-3'>
-                        {display[i+j]}
-                    </div>
-                    <div className='col-1-of-3'>
-                        {display[i+1+j] ? display[i+1+j] : null}
-                    </div>
-                    <div className='col-1-of-3'>
-                        {display[i+2+j] ? display[i+2+j] : null}
-                    </div>
-                </div>
-            );
-            j+=2
-        }
-        console.log(result.length)
-
-        return result;
-    };
-
-
-
-
-
-    return (
-        <main className='listings'>
-
-            <section className='listings__listings'>
-                {displayListings()}
-            </section>
-     
-        </main>
-    );
+import React from 'react';
+import { Link } from 'react-router-dom';
+import '../styles/Home.css'; // Assuming your CSS file is named HomePage.css
+import menlogo from '../assets/men.png'
+import womenlogo from '../assets/women.png'
+import kidslogo from '../assets/kids.png'
+const Home = () => {
+  return (
+    <div className="homepage">
+      <Link to="/men" className="category-link">
+        <img src={menlogo} alt="Men" className="category-logo" />
+        <p>Men</p>
+      </Link>
+      <Link to="/women" className="category-link">
+        <img src={womenlogo} alt="Women" className="category-logo" />
+        <p>Women</p>
+      </Link>
+      <Link to="/kids" className="category-link">
+        <img src={kidslogo} alt="Kids" className="category-logo" />
+        <p>Kids</p>
+      </Link>
+      
+    </div>
+  );
 };
 
 export default Home;

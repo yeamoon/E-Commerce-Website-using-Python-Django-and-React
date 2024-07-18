@@ -26,8 +26,12 @@ urlpatterns = [
     path("api/token/", TokenObtainPairView.as_view(), name="login"),
     path("api/token/refresh/", TokenRefreshView.as_view(), name="refresh"),
     path("api-auth/", include("rest_framework.urls")),
+   
+ 
     path("api/", include("api.urls")),
-    path("api/", include("api.urls")),
+    path("Address/", include("Address.urls")),
+
+  
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

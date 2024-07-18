@@ -32,11 +32,9 @@ const navbar = () => {
                         <NavLink className='navbar__bottom__item__link' exact to='/listings'>ProductList</NavLink>
                     </li>
                     <li className='navbar__bottom__item'>
-                        <NavLink className='navbar__bottom__item__link' exact to='/about'>About</NavLink>
+                        <NavLink className='navbar__bottom__item__link' exact to='/profile'>Profile</NavLink>
                     </li>
-                    <li className='navbar__bottom__item'>
-                        <NavLink className='navbar__bottom__item__link' exact to='/contact'>Contact</NavLink>
-                    </li>
+                    
                 </div>
             </nav>
             

@@ -5,7 +5,8 @@ import Home from "./pages/Home"
 import Login from "./pages/Login"
 import Register from "./pages/Register"
 import Listing from "./pages/Listing"
-import Privateroute from "./components/Privateroute"
+import Profile from "./pages/Profile"
+
 import Layout from './hocs/Layout';
 
 function RegisterAndLogout() {
@@ -21,19 +22,12 @@ function App() {
       <Layout>
         <Routes>
           
-          <Route
-            path="/"
-            element={
-             
-                <Home />
-            
-            }
-          />
+          <Route path="/"element={<Home /> }/>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
          
           <Route exact path='/listings'element={<Listing/>} />
-
+          <Route exact path='/profile'element={<Profile/>} />
 
      
 

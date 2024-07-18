@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'api',
     'owner',
     'productlist',
+    'Address',
     'rest_framework',
     'corsheaders',
 ]

@@ -1,29 +1,36 @@
 .card {
-    padding: 4rem 3rem;
-    background-color:azure;
-    border-radius: 0.5rem;
-}
-.card__header {
-        width: 100%;
-}
-.card__header__photo {
-            width: 100%;
-        }
-    
-
-    .card__title {
-        color:aquamarine;
-        font-size: 2.4rem;
-        margin-bottom: 2rem;
-    }
-
-    
-    .card__info {
-        font-size: 1.6rem;
-        color:blue;
-        margin-bottom: 0.5rem;
-    }
-
+    display: flex;
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin: 16px 0;
+    background-color: #fff;
+    border-radius: 8px;
+  }
   
-
-    
+  .card__left {
+    flex: 1;
+    max-width: 150px; /* Adjust based on your image size */
+  }
+  
+  .card__photo {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .card__right {
+    flex: 2;
+    padding-left: 16px;
+  }
+  
+  .card__title {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  .card__info {
+    margin: 8px 0;
+  }
+  .card__price {
+    font-weight: bold;
+  }
