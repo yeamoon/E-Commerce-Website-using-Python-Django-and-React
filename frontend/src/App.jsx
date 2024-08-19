@@ -20,19 +20,12 @@ function App() {
     return (
       <BrowserRouter>
       <Layout>
-        <Routes>
-          
+        <Routes>  
           <Route path="/"element={<Home /> }/>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-         
           <Route exact path='/listings'element={<Listing/>} />
           <Route exact path='/profile'element={<Profile/>} />
-
-     
-
-
-
           </Routes>
           </Layout>
           </BrowserRouter>

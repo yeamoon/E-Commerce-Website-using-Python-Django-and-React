@@ -39,6 +39,7 @@ const Listing= () => {
               
                 description={listing.description}
                 photo_main={listing.photo_main }
+                
               
               /> 
                 
